@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.reproductor{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.video{
+    display: block;
+    width: 100%;
+    background-color: black;
+}
+
+.controles{
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    padding: 20px;
+    background-color: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#progreso{
+    --progreso: 0%;
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(
+        to right,
+        #fff 0%, 
+        #555 var(--progreso)
+        #444 var(--progreso),
+        #444 100%
+    );        ;
+}
+
+#progreso::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -8px; /* Ajusta para centrar el thumb */
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.izquierda, .derecha{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+#tiempo{
+    color: white;
+}
+
+#volumen{
+    width: 100px;
+}
+

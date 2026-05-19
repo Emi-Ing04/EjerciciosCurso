@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar y Ocultar Contenido</title>
+</head>
+<body>
+
+    <h1>Panel de Control de Visibilidad</h1>
+    
+    <button id="mostrarOcultar">Mostrar contenido</button>
+
+    <p id="parrafoSecreto" style="display: none;">¡Aquí está el contenido oculto! La maquinaria está funcionando.</p>
+
+    <script>
+        
+        let boton = document.getElementById('mostrarOcultar');
+        let parrafo = document.getElementById('parrafoSecreto');
+
+        
+        boton.addEventListener('click', function() {
+            
+            if (parrafo.style.display === 'none') {
+                
+                // ESTADO A: Si el párrafo está oculto, lo mostramos y cambiamos el texto del botón
+                parrafo.style.display = 'block'; 
+                boton.textContent = 'Ocultar contenido';
+                
+            } else {
+                
+                // ESTADO B: Si el párrafo está visible, lo ocultamos y cambiamos el texto del botón
+                parrafo.style.display = 'none'; 
+                boton.textContent = 'Mostrar contenido';
+                
+            }
+            
+        });
+    </script>
+</body>
+</html>
