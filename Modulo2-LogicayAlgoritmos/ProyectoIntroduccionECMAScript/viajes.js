@@ -34,7 +34,7 @@ export const registrarDestino = (destino, fecha, transporte) => {
     // Función flecha exportada para mostrar itinerario usando Foreach
 export const mostrarItinerario = () => {
     // Se obtiene el contenedor del DOM para mostrar los viajes
-    const contendor = document.getElementById("lista-viajes");
+    const contenedor = document.getElementById("lista-viajes");
     
     contenedor.innerHTML = ""; // Limpiamos el contenedor antes de mostrar el itinerario
 
