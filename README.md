@@ -9,8 +9,8 @@ Aquí documento mi progreso a través de los diferentes módulos del curso, alma
 El aprendizaje está planificado en los siguientes módulos:
 
 - [ ] **Módulo 1:** JavaScript desde cero 
-- [ ] **Módulo 2:** Lógica y Algoritmos *(En curso)*
-- [ ] **Módulo 3:** Desarrollo Avanzado en JavaScript
+- [ ] **Módulo 2:** Lógica y Algoritmos 
+- [ ] **Módulo 3:** Desarrollo Avanzado en JavaScript *(En curso)*
 - [ ] **Módulo 4:** Introducción a React
 - [ ] **Módulo 5:** React Avanzado
 
