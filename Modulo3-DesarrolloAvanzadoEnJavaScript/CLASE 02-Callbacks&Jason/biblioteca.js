@@ -35,7 +35,7 @@ function agregarLibro(titulo, autor, genero, disponible, callback) {
         biblioteca.libros.push(nuevoLibro);
         console.log(`\n[Éxito] El libro "${titulo}" ha sido agregado.`);
         
-        if (callback) callback(); // Avisamos que ya terminamos de escribir
+        if (callback) callback(); // Se avisa que ya se terminó de escribir
     }, 1000);
 }
 
