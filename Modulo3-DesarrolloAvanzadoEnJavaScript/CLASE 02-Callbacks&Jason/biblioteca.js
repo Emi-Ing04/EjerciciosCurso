@@ -73,7 +73,7 @@ mostrarLibros(() => {
         // Este código solo corre cuando agregarLibro termina
         actualizarDisponibilidad("1984", false, () => {
             
-            // Finalmente, mostramos cómo quedó el inventario
+            // Finalmente, se muestra el cambio en el inventario
             mostrarLibros();
             
         });
