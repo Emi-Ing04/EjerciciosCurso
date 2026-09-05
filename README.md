@@ -10,8 +10,8 @@ El aprendizaje está planificado en los siguientes módulos:
 
 - [ ] **Módulo 1:** JavaScript desde cero 
 - [ ] **Módulo 2:** Lógica y Algoritmos 
-- [ ] **Módulo 3:** Desarrollo Avanzado en JavaScript *(En curso)*
-- [ ] **Módulo 4:** Introducción a React
+- [ ] **Módulo 3:** Desarrollo Avanzado en JavaScript
+- [ ] **Módulo 4:** Introducción a React *(En curso)*
 - [ ] **Módulo 5:** React Avanzado
 
 > **Nota arquitectónica:** Para mantener un control de versiones limpio, los proyectos finales y entregables de cada módulo no están aquí, sino que se encuentran alojados en sus propios repositorios independientes dentro de mi perfil.
