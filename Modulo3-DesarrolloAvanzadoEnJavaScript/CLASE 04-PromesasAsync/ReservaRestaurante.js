@@ -40,7 +40,7 @@ async function realizarReserva(nombreCliente, mesasSolicitadas) {
         const msjCorreo = await enviarCorreoConfirmacion(nombreCliente);
         console.log("Paso 2 completado:", msjCorreo);
 
-        console.log("PROCESO TERMINADO: Reserva realizada con éxito para", nombreCliente);
+        console.log(`PROCESO TERMINADO: Reserva realizada con éxito para ${nombreCliente}`);
 
     } catch (error) {
         console.error("Error al realizar la reserva:", error);
