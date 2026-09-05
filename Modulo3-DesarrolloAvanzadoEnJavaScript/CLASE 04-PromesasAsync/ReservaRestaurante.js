@@ -46,3 +46,9 @@ async function realizarReserva(nombreCliente, mesasSolicitadas) {
         console.error("Error al realizar la reserva:", error);
     }
 }
+
+
+// Ejemplo de uso
+realizarReserva("Juan Pérez", 3); // Este caso debería funcionar correctamente
+
+realizarReserva("María López", 6); // Este caso debería fallar por falta de mesas
