@@ -1,18 +1,65 @@
+/* 1. Contenedor principal del formulario */
 form {
   width: 50%;
-  margin: auto;
-  padding: 20px;
+  margin: 20px auto;
+  padding: 25px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif; 
+  background-color: #f9f9f9;
 }
+
+/* 2. Títulos de cada campo */
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
-input, select, button {
+
+/* 3. Cajas de texto, fechas y botones (Ocupan el 100%) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+button {
   width: 100%;
-  margin-bottom: 15px;
   padding: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+/* 4. El arreglo para las casillas y botones de radio */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto; /* Anula la regla del 100% de ancho */
+  margin-right: 10px; /* Crea espacio entre el cuadrito y el texto */
+  transform: scale(1.2); 
+}
+
+/* 5. Ajuste visual para las etiquetas que contienen las casillas */
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  font-weight: normal; 
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+/* 6. Estilo del botón */
+button {
+  background-color: #0056b3;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #004494; /* Oscurece el botón al pasar el mouse */
 }
