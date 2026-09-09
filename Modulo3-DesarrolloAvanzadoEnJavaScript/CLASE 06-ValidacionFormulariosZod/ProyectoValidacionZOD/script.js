@@ -19,15 +19,15 @@
       };
 
       try {
-        // 4. Validamos los datos con el esquema
+        // 4. Validación de los datos con el esquema
         registerSchema.parse(formData);
     
-        // Si pasa la validación, limpiamos errores anteriores y mostramos éxito
+        // Si pasa la validación, se limpian errores anteriores y se muestra el éxito
         document.getElementById("errors").textContent = ""; 
         alert("¡Registro exitoso!");
         
         } catch (error) {
-        // 5. Si falla, extraemos los mensajes y los unimos con un guion
+        // 5. Si falla, extraemos los mensajes y se unen con un guion
         document.getElementById("errors").textContent = error.errors.map(e => e.message).join(" - ");
         }
     });
