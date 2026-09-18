@@ -1,16 +1,13 @@
-function Tarjeta() {
-  // Definimos la información estática de la tarjeta
-  const nombre = "Emilio Guzmán";
-  const profesion = "Ingeniero Mecánico";
-  const mensaje = "¡Asesor de proyectos!";
+import './Tarjeta.css'; // Connect your new CSS file
 
-  // Retornamos el JSX que representa la tarjeta
+// Add { nombre, profesion, mensaje } to receive the data as Props
+function Tarjeta({ nombre, profesion, mensaje }) {
   return (
-    <div style={{ border: '1px solid #ccc', padding: '20px', width: '300px', textAlign: 'center' }}>
-      {/* JSX permite incrustar variables en HTML utilizando llaves {} */}
-      <h2>{nombre}</h2>
-      <h4>{profesion}</h4>
-      <p>{mensaje}</p>
+    <div className="card-container">
+      <div className="profile-placeholder"></div>
+      <h2 className="card-name">{nombre}</h2>
+      <h4 className="card-profession">{profesion}</h4>
+      <p className="card-description">{mensaje}</p>
     </div>
   );
 }
