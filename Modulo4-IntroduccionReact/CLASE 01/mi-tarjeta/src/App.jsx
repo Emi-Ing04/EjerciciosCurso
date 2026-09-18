@@ -3,7 +3,7 @@ import Tarjeta from './Tarjeta';
 function App() {
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>Tarjetas del Equipo</h1>
+      <h1 style={{ textAlign: 'center' }}>Tarjeta de presentación</h1>
       
       <div className="cards-wrapper">
         {/* Pass the data here. Using an initial or alias is a great way to protect your privacy online */}
