@@ -1,42 +1,52 @@
-/* Centers everything on the screen and adds a light gray background */
-.page-background {
+/* Container for multiple cards */
+.cards-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: sans-serif;
-  background-color: #f4f7f6;
-  min-height: 100vh;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
   padding: 20px;
 }
 
-/* The main design of the presentation card */
+/* The modern card design */
 .card-container {
   background-color: #ffffff;
-  width: 350px;
-  padding: 30px;
-  border-radius: 12px; /* Makes the corners round */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Adds a 3D shadow effect */
+  width: 280px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-top: 6px solid #2c3e50; /* A dark blue professional top border */
-  margin-top: 20px;
+  font-family: sans-serif;
+  border-top: 5px solid #2c3e50;
+  transition: transform 0.3s ease; /* Adds a smooth animation */
 }
 
-/* Styles for the specific text elements */
+/* Makes the card lift up slightly when you hover over it */
+.card-container:hover {
+  transform: translateY(-10px);
+}
+
+.profile-placeholder {
+  width: 90px;
+  height: 90px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+}
+
 .card-name {
-  color: #2c3e50;
+  color: #333333;
+  margin: 0 0 5px 0;
   font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 5px;
 }
 
 .card-profession {
-  color: #3498db; /* A bright, energetic blue */
-  font-size: 18px;
-  margin-top: 0;
+  color: #3498db;
+  margin: 0 0 15px 0;
   font-weight: 500;
 }
 
 .card-description {
-  color: #7f8c8d; /* A soft gray for the description text */
-  font-size: 16px;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.4;
 }
