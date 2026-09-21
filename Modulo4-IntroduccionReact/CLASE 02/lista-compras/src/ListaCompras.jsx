@@ -1,55 +1,81 @@
 import { useState } from "react";
+import "./ListaCompras.css"; 
 
 function ListaCompras() {
-  // Se define el estado para la lista de compras y el input
   const [productos, setProductos] = useState([]);
   const [nuevoProducto, setNuevoProducto] = useState("");
 
-  // Función para agregar un nuevo producto a la lista
+  // 1. Prevenir duplicados
   const agregarProducto = () => {
     if (nuevoProducto.trim() !== "") {
-      setProductos([...productos, nuevoProducto]);
-      setNuevoProducto(""); // Se limpia el input
+      // Verificamos si el producto ya existe en el arreglo
+      if (productos.includes(nuevoProducto.trim())) {
+        alert("¡Este producto ya está en tu lista!");
+        return;
+      }
+
+      setProductos([...productos, nuevoProducto.trim()]);
+      setNuevoProducto("");
     }
   };
 
-  // Función para eliminar un producto usando su índice con .filter()
+  // 2. Eliminar producto individual por índice
   const eliminarProducto = (indexAEliminar) => {
     const productosActualizados = productos.filter((_, index) => index !== indexAEliminar);
     setProductos(productosActualizados);
   };
 
-  return (
-    <div style={{ textAlign: "center", marginTop: "40px", fontFamily: "sans-serif" }}>
-      <h2>Lista de Compras</h2>
-      
-      {/* Input vinculado al estado 'nuevoProducto' */}
-      <input
-        type="text"
-        value={nuevoProducto}
-        onChange={(e) => setNuevoProducto(e.target.value)}
-        placeholder="Escribe un producto..."
-        style={{ padding: "8px", width: "200px", marginRight: "10px" }}
-      />
-      
-      <button onClick={agregarProducto} style={{ padding: "8px 15px", cursor: "pointer" }}>
-        Agregar
-      </button>
+  // 3. Vaciar toda la lista de golpe
+  const limpiarLista = () => {
+    setProductos([]);
+  };
 
-      {/* Lista visual renderizada con .map() */}
-      <ul style={{ listStyle: "none", padding: 0, marginTop: "20px" }}>
+  return (
+    <div className="compras-container">
+      <h2 className="compras-titulo">Lista de Compras</h2>
+
+      {/* Contador dinámico de elementos */}
+      <p className="compras-contador">
+        {productos.length === 0 
+          ? "Tu lista está vacía" 
+          : `Tienes ${productos.length} producto(s) en tu lista`}
+      </p>
+
+      {/* Input y Botón de agregar */}
+      <div className="compras-form">
+        <input
+          type="text"
+          className="compras-input"
+          value={nuevoProducto}
+          onChange={(e) => setNuevoProducto(e.target.value)}
+          placeholder="Escribe un producto..."
+        />
+        <button className="compras-btn-agregar" onClick={agregarProducto}>
+          Agregar
+        </button>
+      </div>
+
+      {/* Lista de productos */}
+      <ul className="compras-lista">
         {productos.map((producto, index) => (
-          <li key={index} style={{ margin: "10px 0", fontSize: "18px" }}>
-            {producto}{" "}
+          <li key={index} className="compras-item">
+            <span>{producto}</span>
             <button 
+              className="compras-btn-eliminar"
               onClick={() => eliminarProducto(index)}
-              style={{ marginLeft: "10px", backgroundColor: "#ff4d4d", color: "white", border: "none", padding: "5px 10px", borderRadius: "4px", cursor: "pointer" }}
             >
-              Realizado / Eliminar
+              Comprado / Eliminar
             </button>
           </li>
         ))}
       </ul>
+
+      {/* Botón para vaciar toda la lista (solo se muestra si hay productos) */}
+      {productos.length > 0 && (
+        <button className="compras-btn-limpiar" onClick={limpiarLista}>
+          Vaciar toda la lista
+        </button>
+      )}
     </div>
   );
 }
