@@ -21,7 +21,7 @@ function App() {
 
     obtenerUsuario();
     
-    // Corregido: Agregamos [userId] para que se ejecute cada vez que cambie el ID
+    // Corregido: Se agregan [userId] para que se ejecute cada vez que cambie el ID
   }, [userId]);
 
   return (
