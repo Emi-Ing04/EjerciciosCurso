@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { datosCitas } from './Citas'; // Se importala lista simulada
+import { datosCitas } from './datos';
 
 function CitaDetalle() {
   //Se extrae el ID dinámico de la URL
