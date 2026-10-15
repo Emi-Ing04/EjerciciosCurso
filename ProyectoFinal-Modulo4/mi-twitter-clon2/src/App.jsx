@@ -36,10 +36,10 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login1 onLogin={login} />} />
         
-        {/* El Home también está protegido por dentro */}
+        {/* Ruta principal: Inicio */}
         <Route path="/" element={<Home1 user={user} logout={logout} />} />
         
-        {/* Protección de ruta: Si hay usuario entra a Profile, si no, lo patea a Login */}
+        {/* Protección de ruta: Si hay usuario entra a Profile, si no, lo manda a Login */}
         <Route
           path="/profile"
           element={user ? <Profile1 user={user} /> : <Navigate to="/login" />}
