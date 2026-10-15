@@ -15,7 +15,7 @@ const Home1 = ({ user, logout }) => {
 
 
   if (!user) {
-    return <Navigate to="/login1" />;
+    return <Navigate to="/login" />;
   }
 
   const addTweet = (text) => {
