@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
-import Home1 from "./pages/Home1";
-import Profile1 from "./pages/Profile1";
-import Login1 from "./pages/Login1";
+import Home1 from "./pages1/Home1";
+import Profile1 from "./pages1/Profile1";
+import Login1 from "./pages1/Login1";
 
 const App = () => {
   const [user, setUser] = useState(() => {

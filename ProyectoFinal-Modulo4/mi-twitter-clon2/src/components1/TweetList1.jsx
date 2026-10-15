@@ -1,4 +1,4 @@
-import Tweet from "./Tweet1";
+import Tweet1 from "./Tweet1";
 
 const TweetList1 = ({ tweets, onLike }) => {
 
@@ -8,7 +8,7 @@ const TweetList1 = ({ tweets, onLike }) => {
 
       {tweets.map((tweet) => (
 
-        <Tweet key={tweet.id} tweet={tweet} onLike={onLike} />
+        <Tweet1 key={tweet.id} tweet={tweet} onLike={onLike} />
 
       ))}
 

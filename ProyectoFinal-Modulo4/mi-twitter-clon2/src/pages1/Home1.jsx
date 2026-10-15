@@ -4,7 +4,7 @@ import TweetList1 from "../components1/TweetList1";
 import TweetForm1 from "../components1/TweetForm1";
 
 const Home1 = ({ user, logout }) => {
-  // Lógica de los tweets (del taller anterior)
+  
   const [tweets, setTweets] = useState(() => {
     return JSON.parse(localStorage.getItem("tweets1")) || [];
   });
