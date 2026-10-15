@@ -1,6 +1,6 @@
 import Tweet from "./Tweet1";
 
-const TweetList = ({ tweets, onLike }) => {
+const TweetList1 = ({ tweets, onLike }) => {
 
   return (
 
@@ -18,4 +18,4 @@ const TweetList = ({ tweets, onLike }) => {
 
 };
 
-export default TweetList;
+export default TweetList1;

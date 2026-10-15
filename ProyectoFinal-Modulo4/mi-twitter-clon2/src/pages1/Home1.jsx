@@ -4,7 +4,7 @@ import TweetList from "../components/TweetList";
 
 import TweetForm from "../components/TweetForm";
 
-const Home = () => {
+const Home1 = () => {
 
   const [tweets, setTweets] = useState(() => {
 
@@ -62,4 +62,4 @@ const Home = () => {
 
 };
 
-export default Home;
+export default Home1;

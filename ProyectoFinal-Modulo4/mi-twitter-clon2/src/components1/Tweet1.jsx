@@ -1,4 +1,4 @@
-const Tweet = ({ tweet, onLike }) => {
+const Tweet1 = ({ tweet, onLike }) => {
 
   return (
 
@@ -18,4 +18,4 @@ const Tweet = ({ tweet, onLike }) => {
 
 };
 
-export default Tweet;
+export default Tweet1;

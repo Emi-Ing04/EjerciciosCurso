@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ onLogin }) => {
+const Login1 = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
@@ -32,4 +32,4 @@ const Login = ({ onLogin }) => {
   );
 };
 
-export default Login;
+export default Login1;

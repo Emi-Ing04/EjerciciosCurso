@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TweetForm = ({ onAddTweet }) => {
+const TweetForm1 = ({ onAddTweet }) => {
 
   const [text, setText] = useState("");
 
@@ -40,4 +40,4 @@ const TweetForm = ({ onAddTweet }) => {
 
 };
 
-export default TweetForm;
+export default TweetForm1;
